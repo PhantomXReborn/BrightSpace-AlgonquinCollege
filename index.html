@@ -1,0 +1,1351 @@
+<!DOCTYPE html>
+<html lang="en-ca" dir="ltr" style="--d2l-vh: 9.41px; --d2l-vw: 11.01px;" data-css-vars="{&quot;--d2l-branding-primary-color&quot;:&quot;#00703c&quot;}" data-app-version="20.25.8">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Homepage - Algonquin College</title>
+    
+    <!-- Font Preload -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="/d2l/lp/web/faviconView?variant=0&version=1">
+    
+    <!-- Core CSS -->
+    <style>
+        :root {
+            /* Color System */
+            --primary-color: #00703c;
+            --primary-dark: #005a30;
+            --primary-light: #e6f4ed;
+            --accent-color: #006fbf;
+            --accent-light: #e8f8ff;
+            --success-color: #2e7d32;
+            --warning-color: #ed6c02;
+            --error-color: #d32f2f;
+            --surface-color: #ffffff;
+            --background-color: #f8f9fa;
+            --gray-50: #f9fafb;
+            --gray-100: #f3f4f6;
+            --gray-200: #e5e7eb;
+            --gray-300: #d1d5db;
+            --gray-400: #9ca3af;
+            --gray-500: #6b7280;
+            --gray-600: #4b5563;
+            --gray-700: #374151;
+            --gray-800: #1f2937;
+            --gray-900: #111827;
+            --text-primary: var(--gray-900);
+            --text-secondary: var(--gray-600);
+            --text-tertiary: var(--gray-500);
+            --border-color: var(--gray-200);
+            --border-radius-sm: 4px;
+            --border-radius: 8px;
+            --border-radius-lg: 12px;
+            --border-radius-xl: 16px;
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            --transition-fast: 150ms;
+            --transition: 250ms;
+            --transition-slow: 350ms;
+            --max-width: 1400px;
+            --spacing-xs: 0.25rem;
+            --spacing-sm: 0.5rem;
+            --spacing: 1rem;
+            --spacing-lg: 1.5rem;
+            --spacing-xl: 2rem;
+            --spacing-2xl: 3rem;
+        }
+
+        /* Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 16px;
+            scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: var(--background-color);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 600;
+            line-height: 1.3;
+            margin-bottom: var(--spacing);
+            color: var(--gray-900);
+        }
+
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        h5 { font-size: 1.125rem; }
+        h6 { font-size: 1rem; }
+
+        p {
+            margin-bottom: var(--spacing);
+        }
+
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+            transition: color var(--transition-fast);
+        }
+
+        a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Layout */
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing);
+        }
+
+        /* Navigation */
+        .top-nav {
+            background: var(--surface-color);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.95);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: var(--spacing) 0;
+        }
+
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            font-weight: 600;
+            font-size: 1.25rem;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .nav-brand-icon {
+            width: 32px;
+            height: 32px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: var(--border-radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-lg);
+        }
+
+        .nav-link {
+            color: var(--text-secondary);
+            font-weight: 500;
+            padding: var(--spacing-sm) var(--spacing);
+            border-radius: var(--border-radius);
+            transition: all var(--transition-fast);
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .nav-link:hover {
+            color: var(--primary-color);
+            background: var(--primary-light);
+        }
+
+        .nav-user {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            padding: var(--spacing-sm) var(--spacing);
+            background: var(--gray-50);
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            color: var(--text-primary);
+            transition: all var(--transition-fast);
+        }
+
+        .nav-user:hover {
+            background: var(--gray-100);
+        }
+
+        .user-avatar {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: var(--primary-color);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+        }
+
+        /* Main Layout */
+        .main-content {
+            padding: var(--spacing-xl) 0;
+            min-height: calc(100vh - 140px);
+        }
+
+        /* Welcome Header */
+        .welcome-header {
+            text-align: center;
+            margin-bottom: var(--spacing-2xl);
+            padding: var(--spacing-xl);
+            background: linear-gradient(135deg, var(--primary-light) 0%, var(--accent-light) 100%);
+            border-radius: var(--border-radius-xl);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .welcome-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%2300703c' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+            opacity: 0.3;
+        }
+
+        .welcome-title {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: var(--spacing-sm);
+            position: relative;
+        }
+
+        .welcome-subtitle {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .welcome-meta {
+            display: flex;
+            justify-content: center;
+            gap: var(--spacing-xl);
+            flex-wrap: wrap;
+        }
+
+        .meta-item {
+            background: var(--surface-color);
+            padding: var(--spacing-sm) var(--spacing);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-sm);
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+        }
+
+        /* Dashboard Grid */
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: var(--spacing-xl);
+            margin-bottom: var(--spacing-2xl);
+        }
+
+        /* Widget Base */
+        .widget {
+            background: var(--surface-color);
+            border-radius: var(--border-radius-xl);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            transition: transform var(--transition), box-shadow var(--transition);
+            border: 1px solid var(--border-color);
+        }
+
+        .widget:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .widget-header {
+            padding: var(--spacing-lg);
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--gray-50);
+        }
+
+        .widget-title {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            margin: 0;
+            font-size: 1.25rem;
+        }
+
+        .widget-icon {
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: var(--border-radius-sm);
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .widget-actions {
+            display: flex;
+            gap: var(--spacing-sm);
+        }
+
+        .widget-content {
+            padding: var(--spacing-lg);
+        }
+
+        /* Primary Widget */
+        .widget-primary {
+            grid-column: 1;
+        }
+
+        /* Courses Grid */
+        .courses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: var(--spacing);
+        }
+
+        .course-card {
+            background: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius-lg);
+            padding: var(--spacing);
+            transition: all var(--transition);
+            position: relative;
+            overflow: hidden;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .course-card:hover {
+            border-color: var(--primary-color);
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+        }
+
+        .course-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--primary-color);
+        }
+
+        .course-image {
+            width: 100%;
+            height: 160px;
+            background: linear-gradient(135deg, var(--primary-light), var(--accent-light));
+            border-radius: var(--border-radius);
+            margin-bottom: var(--spacing);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-color);
+            font-size: 3rem;
+        }
+
+        .course-info h3 {
+            font-size: 1.125rem;
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .course-meta {
+            display: flex;
+            gap: var(--spacing);
+            color: var(--text-tertiary);
+            font-size: 0.875rem;
+            margin-bottom: var(--spacing);
+        }
+
+        .course-progress {
+            margin-top: var(--spacing);
+        }
+
+        .progress-bar {
+            height: 6px;
+            background: var(--gray-200);
+            border-radius: 3px;
+            overflow: hidden;
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: var(--success-color);
+            border-radius: 3px;
+            transition: width var(--transition-slow);
+        }
+
+        /* Sidebar */
+        .dashboard-sidebar {
+            grid-column: 2;
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-xl);
+        }
+
+        /* Promo Card */
+        .promo-card {
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            color: white;
+            border-radius: var(--border-radius-xl);
+            overflow: hidden;
+        }
+
+        .promo-header {
+            padding: var(--spacing);
+            background: rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .promo-title {
+            color: white;
+            margin: 0;
+            font-size: 1.25rem;
+        }
+
+        .promo-content {
+            padding: var(--spacing);
+        }
+
+        .btn-promo {
+            display: inline-block;
+            background: white;
+            color: var(--primary-color);
+            padding: var(--spacing-sm) var(--spacing);
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            margin-top: var(--spacing);
+            transition: all var(--transition-fast);
+            text-decoration: none;
+        }
+
+        .btn-promo:hover {
+            background: var(--gray-100);
+            transform: translateY(-1px);
+        }
+
+        /* Calendar */
+        .calendar-frame {
+            width: 100%;
+            height: 300px;
+            border: none;
+            border-radius: var(--border-radius);
+        }
+
+        /* Notification Status */
+        .notification-status {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing);
+        }
+
+        .status-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: var(--spacing-sm) 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .status-label {
+            color: var(--text-secondary);
+        }
+
+        .status-indicator {
+            padding: var(--spacing-xs) var(--spacing-sm);
+            border-radius: var(--border-radius-sm);
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .status-indicator.active {
+            background: var(--success-color);
+            color: white;
+        }
+
+        .btn-link {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--spacing-xs);
+            color: var(--accent-color);
+            font-weight: 500;
+            margin-top: var(--spacing);
+            text-decoration: none;
+        }
+
+        .btn-link:hover {
+            color: var(--primary-color);
+        }
+
+        /* Support Footer */
+        .support-footer {
+            margin-top: var(--spacing-2xl);
+            padding: var(--spacing-xl);
+            background: var(--gray-50);
+            border-radius: var(--border-radius-xl);
+            border: 1px solid var(--border-color);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--spacing-2xl);
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .footer-section h4 {
+            margin-bottom: var(--spacing);
+            color: var(--gray-700);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .copyright-notice {
+            padding-top: var(--spacing);
+            border-top: 1px solid var(--border-color);
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+        }
+
+        .copyright-notice a {
+            color: var(--accent-color);
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.75rem 1.5rem;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+            font-size: 0.875rem;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-icon {
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: none;
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            transition: all var(--transition-fast);
+            color: var(--text-secondary);
+            font-size: 1rem;
+        }
+
+        .btn-icon:hover {
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+            background: var(--primary-light);
+        }
+
+        /* Loading States */
+        .loading-state {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: var(--spacing-2xl);
+            color: var(--text-tertiary);
+        }
+
+        .loading-spinner {
+            width: 48px;
+            height: 48px;
+            border: 3px solid var(--gray-200);
+            border-top-color: var(--primary-color);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-bottom: var(--spacing);
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Session Warning */
+        .session-warning {
+            position: fixed;
+            bottom: var(--spacing);
+            right: var(--spacing);
+            background: var(--warning-color);
+            color: white;
+            padding: var(--spacing);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-xl);
+            max-width: 400px;
+            z-index: 1000;
+            animation: slideIn 0.3s ease-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Utility Classes */
+        .hidden {
+            display: none !important;
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .dashboard-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .dashboard-sidebar {
+                grid-column: 1;
+            }
+            
+            .welcome-title {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                gap: var(--spacing);
+            }
+            
+            .welcome-title {
+                font-size: 2rem;
+            }
+            
+            .welcome-meta {
+                flex-direction: column;
+                gap: var(--spacing);
+            }
+            
+            .courses-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .nav-container {
+                flex-direction: column;
+                gap: var(--spacing);
+            }
+            
+            .nav-menu {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .welcome-header {
+                padding: var(--spacing);
+            }
+            
+            .widget-header {
+                flex-direction: column;
+                gap: var(--spacing);
+                align-items: flex-start;
+            }
+            
+            .widget-actions {
+                width: 100%;
+                justify-content: flex-end;
+            }
+        }
+
+        /* Dark Mode */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --surface-color: #1f2937;
+                --background-color: #111827;
+                --text-primary: #f9fafb;
+                --text-secondary: #d1d5db;
+                --text-tertiary: #9ca3af;
+                --border-color: #374151;
+                --gray-50: #374151;
+                --gray-100: #4b5563;
+                --gray-200: #6b7280;
+            }
+            
+            .promo-card {
+                background: linear-gradient(135deg, var(--primary-dark), #004225);
+            }
+            
+            .calendar-frame {
+                filter: invert(1) hue-rotate(180deg);
+            }
+        }
+
+        /* Print Styles */
+        @media print {
+            .top-nav,
+            .btn,
+            .btn-promo,
+            .session-warning {
+                display: none;
+            }
+            
+            .widget {
+                box-shadow: none;
+                border: 1px solid var(--gray-300);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="top-nav">
+        <div class="container nav-container">
+            <a href="/d2l/lp/ouHome/defaultHome.d2l" class="nav-brand">
+                <div class="nav-brand-icon">AC</div>
+                <span>Algonquin College</span>
+            </a>
+            
+            <div class="nav-menu">
+                <a href="/d2l/home" class="nav-link">Home</a>
+                <a href="/d2l/le/manageCourses/search/6606" class="nav-link">Courses</a>
+                <a href="/d2l/le/calendar/6606" class="nav-link">Calendar</a>
+                <a href="https://www.algonquincollege.com/studentsupportservices/" class="nav-link">Resources</a>
+                <a href="https://algonquincollege.libguides.com/student-survival-guide/brightspace" class="nav-link">Support</a>
+            </div>
+            
+            <a href="/d2l/lp/profile/profile_edit.d2l?ou=6606" class="nav-user">
+                <div class="user-avatar">RH</div>
+                <span>Reece Hannah</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content container">
+        <!-- Welcome Header -->
+        <header class="welcome-header">
+            <h1 class="welcome-title">Welcome back, Reece</h1>
+            <p class="welcome-subtitle">Algonquin College Student Dashboard</p>
+            <div class="welcome-meta">
+                <div class="meta-item">
+                    <strong>Student ID:</strong> 218262
+                </div>
+                <div class="meta-item">
+                    <strong>Current Time:</strong> <span id="current-time">Loading...</span>
+                </div>
+                <div class="meta-item">
+                    <strong>Campus:</strong> Ottawa
+                </div>
+            </div>
+        </header>
+
+        <!-- Dashboard Grid -->
+        <div class="dashboard-grid">
+            <!-- My Courses Widget -->
+            <section class="widget widget-primary" aria-labelledby="courses-title">
+                <div class="widget-header">
+                    <h2 class="widget-title" id="courses-title">
+                        <div class="widget-icon">📚</div>
+                        My Courses
+                    </h2>
+                    <div class="widget-actions">
+                        <button class="btn-icon" aria-label="Search courses" title="Search" onclick="searchCourses()">
+                            🔍
+                        </button>
+                        <button class="btn-icon" aria-label="Filter courses" title="Filter" onclick="filterCourses()">
+                            ⚙️
+                        </button>
+                        <button class="btn-icon" aria-label="Refresh courses" title="Refresh" onclick="loadCourses()">
+                            ↻
+                        </button>
+                    </div>
+                </div>
+                <div class="widget-content">
+                    <div class="courses-grid" id="courses-container">
+                        <!-- Courses will be loaded here -->
+                        <div class="loading-state">
+                            <div class="loading-spinner"></div>
+                            <p>Loading your courses...</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sidebar -->
+            <aside class="dashboard-sidebar">
+                <!-- AC Café Promo -->
+                <div class="promo-card">
+                    <div class="promo-header">
+                        <h3 class="promo-title">JOIN THE AC CAFÉ</h3>
+                    </div>
+                    <div class="promo-content">
+                        <p>Start your college journey with the information you need to succeed. Join by enrolling on the Discover page.</p>
+                        <a href="https://brightspace.algonquincollege.com/d2l/le/discovery/view/" class="btn-promo" target="_blank">▶ Self-enroll now!</a>
+                    </div>
+                </div>
+
+                <!-- Events Calendar -->
+                <div class="widget">
+                    <div class="widget-header">
+                        <h3 class="widget-title">
+                            <div class="widget-icon">📅</div>
+                            Events Calendar
+                        </h3>
+                    </div>
+                    <div class="widget-content">
+                        <iframe 
+                            src="https://calendar.google.com/calendar/embed?height=300&wkst=1&bgcolor=%23ffffff&ctz=America%2FToronto&src=YWNzdHVkZW50ZXZlbnRzQGdtYWlsLmNvbQ&src=cW5wdmkyc3FwamwxYTNna25kYmxhMzdxYjhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%2322AA99&color=%238A2D38&showTitle=0&showNav=0&showDate=0&showPrint=0&showTabs=0&showCalendars=0&mode=AGENDA&title=Events%20Calendar"
+                            class="calendar-frame"
+                            title="College Events Calendar"
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+
+                <!-- Notification Settings -->
+                <div class="widget">
+                    <div class="widget-header">
+                        <h3 class="widget-title">
+                            <div class="widget-icon">🔔</div>
+                            Notifications
+                        </h3>
+                    </div>
+                    <div class="widget-content">
+                        <div class="notification-status">
+                            <div class="status-item">
+                                <span class="status-label">New Announcements</span>
+                                <span class="status-indicator active">ON</span>
+                            </div>
+                            <div class="status-item">
+                                <span class="status-label">Updated Announcements</span>
+                                <span class="status-indicator active">ON</span>
+                            </div>
+                            <div class="status-item">
+                                <span class="status-label">Assignment Due</span>
+                                <span class="status-indicator active">ON</span>
+                            </div>
+                            <a href="/d2l/Notifications/Settings?ou=6606" class="btn-link">
+                                Update Settings →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+
+        <!-- Support & Resources -->
+        <footer class="support-footer">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>Brightspace Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://brightspace.algonquincollege.com/d2l/le/discovery/view/course/6837" target="_blank">Brightspace Essentials</a></li>
+                        <li><a href="https://algonquincollege.libguides.com/student-survival-guide/brightspace" target="_blank">LMS Help at Algonquin College</a></li>
+                        <li><a href="/d2l/le/manageCourses/search/6606">Manage Courses</a></li>
+                        <li><a href="/d2l/le/discovery/view/">Discover Courses</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Campus Tools</h4>
+                    <ul class="footer-links">
+                        <li><a href="/d2l/lms/email/frame.d2l?ou=6606">Student Email</a></li>
+                        <li><a href="/d2l/le/calendar/6606">Course Calendar</a></li>
+                        <li><a href="https://www.bookstore.algonquincollege.com/Course/mycourselist" target="_blank">My Booklist</a></li>
+                        <li><a href="https://www.algonquincollege.com/byod/software/" target="_blank">Software Downloads</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Student Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://www.algonquincollege.com/studentsupportservices/mental-health/" target="_blank">Student Mental Health</a></li>
+                        <li><a href="https://www.algonquincollege.com/cal/student-resources/" target="_blank">Academic Accommodations</a></li>
+                        <li><a href="https://www.algonquincollege.com/slc" target="_blank">Support for Math, Writing, ESL</a></li>
+                        <li><a href="https://www.algonquincollege.com/academic-success/home/student-success-specialist/" target="_blank">Student Success Specialists</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Administrative</h4>
+                    <ul class="footer-links">
+                        <li><a href="/d2l/lp/preferences/preferences_main/preferences_main.d2l?ou=6606">Account Settings</a></li>
+                        <li><a href="/d2l/lp/admintools/6606/dropdownpartial">Admin Tools</a></li>
+                        <li><a href="/d2l/lp/profile/profile_edit.d2l?ou=6606">Profile</a></li>
+                        <li><a href="javascript:void(0);" onclick="D2L.O('__g1',4)();return false;">Log Out</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright-notice">
+                <p><strong>Copyright / Intellectual Property Notice</strong></p>
+                <p>Materials posted to courses are subject to Intellectual Property and Copyright protection, and as such cannot be used and posted for public dissemination without prior permission from the College.</p>
+                <p>For clarity, these protections are automatic once a work is created, and applies whether or not a copyright statement appears on the material. Students are bound by College policies, including <a href="https://www.algonquincollege.com/policies/aa34-2/" target="_blank">AA 34 - Copyright</a>, and <a href="https://www.algonquincollege.com/policies/sa07/" target="_blank">SA 07 - Student Code of Conduct</a>, and any student found to be using or posting course materials for public dissemination without permission is in breach of these policies and may be sanctioned.</p>
+            </div>
+        </footer>
+    </main>
+
+    <!-- Session Warning -->
+    <div class="session-warning hidden" id="session-warning">
+        <h4>⚠️ Are You Still There?</h4>
+        <p>Your session expires after 180 minutes of inactivity, which protects your information in case you've left your device without logging out.</p>
+        <p><strong>Click anywhere to stay logged in.</strong></p>
+        <button class="btn" onclick="dismissWarning()" style="margin-top: 10px;">Dismiss</button>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Brightspace API Simulation (for logout functionality)
+        window.D2L = window.D2L || {};
+        window.D2L.O = function(name, index) {
+            return function() {
+                console.log(`D2L function called: ${name}[${index}]`);
+                // Handle specific functions
+                if (name === '__g1' && index === 4) {
+                    // Logout function
+                    if (confirm('Are you sure you want to log out?')) {
+                        window.location.href = '/d2l/logout';
+                    }
+                }
+            };
+        };
+
+        // Update current time
+        function updateTime() {
+            const now = new Date();
+            const timeString = now.toLocaleTimeString('en-CA', {
+                timeZone: 'America/Toronto',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit'
+            });
+            
+            const timeElement = document.getElementById('current-time');
+            if (timeElement) {
+                timeElement.textContent = timeString;
+            }
+        }
+
+        // Load sample courses with actual course links
+        function loadCourses() {
+            const coursesContainer = document.getElementById('courses-container');
+            const courses = [
+                {
+                    code: 'CST8102',
+                    title: 'Operating System Fundamentals',
+                    instructor: 'Prof. Johnson',
+                    progress: 75,
+                    color: '#00703c',
+                    link: '/d2l/le/content/6837/Home'
+                },
+                {
+                    code: 'CST8284',
+                    title: 'Object Oriented Programming',
+                    instructor: 'Dr. Smith',
+                    progress: 90,
+                    color: '#006fbf',
+                    link: '/d2l/le/content/6840/Home'
+                },
+                {
+                    code: 'MAT8001C',
+                    title: 'Technical Mathematics',
+                    instructor: 'Prof. Chen',
+                    progress: 60,
+                    color: '#9d1fd4',
+                    link: '/d2l/le/content/6842/Home'
+                },
+                {
+                    code: 'ENL1813T',
+                    title: 'Communications I',
+                    instructor: 'Prof. Williams',
+                    progress: 85,
+                    color: '#d40067',
+                    link: '/d2l/le/content/6845/Home'
+                },
+                {
+                    code: 'CST2355',
+                    title: 'Database Systems',
+                    instructor: 'Dr. Martinez',
+                    progress: 45,
+                    color: '#cd2026',
+                    link: '/d2l/le/content/6848/Home'
+                },
+                {
+                    code: 'GED5001',
+                    title: 'General Education Elective',
+                    instructor: 'Prof. Brown',
+                    progress: 100,
+                    color: '#e87511',
+                    link: '/d2l/le/content/6850/Home'
+                }
+            ];
+
+            coursesContainer.innerHTML = courses.map(course => `
+                <a href="${course.link}" class="course-card" target="_blank">
+                    <div class="course-image" style="background: linear-gradient(135deg, ${course.color}20, ${course.color}40);">
+                        📖
+                    </div>
+                    <div class="course-info">
+                        <h3>${course.code}: ${course.title}</h3>
+                        <div class="course-meta">
+                            <span>👨‍🏫 ${course.instructor}</span>
+                            <span>📊 ${course.progress}%</span>
+                        </div>
+                        <div class="course-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: ${course.progress}%; background: ${course.color};"></div>
+                            </div>
+                            <small>Progress: ${course.progress}% complete</small>
+                        </div>
+                    </div>
+                </a>
+            `).join('');
+            
+            // Add click tracking
+            document.querySelectorAll('.course-card').forEach(card => {
+                card.addEventListener('click', function(e) {
+                    console.log('Course clicked:', this.querySelector('h3').textContent);
+                    // Track course access in localStorage
+                    const courseName = this.querySelector('h3').textContent;
+                    const accessTime = new Date().toISOString();
+                    const accessHistory = JSON.parse(localStorage.getItem('courseAccessHistory') || '[]');
+                    accessHistory.unshift({
+                        course: courseName,
+                        time: accessTime
+                    });
+                    localStorage.setItem('courseAccessHistory', JSON.stringify(accessHistory.slice(0, 10)));
+                });
+            });
+        }
+
+        // Search courses function
+        function searchCourses() {
+            const searchTerm = prompt('Enter course name or code to search:');
+            if (searchTerm) {
+                window.location.href = `/d2l/le/manageCourses/search/6606?search=${encodeURIComponent(searchTerm)}`;
+            }
+        }
+
+        // Filter courses function
+        function filterCourses() {
+            alert('Filter options would open here. This would show semester, department, and status filters.');
+            // In a real implementation, this would open a filter panel
+        }
+
+        // Session management
+        let sessionTimeout;
+        let warningShown = false;
+        
+        function resetSessionTimer() {
+            clearTimeout(sessionTimeout);
+            warningShown = false;
+            
+            // Show warning at 29 minutes (1 minute before 30 minute timeout)
+            sessionTimeout = setTimeout(() => {
+                if (!warningShown) {
+                    document.getElementById('session-warning').classList.remove('hidden');
+                    warningShown = true;
+                    
+                    // Auto-dismiss after 60 seconds
+                    setTimeout(() => {
+                        if (!warningShown) return;
+                        document.getElementById('session-warning').classList.add('hidden');
+                        // Simulate logout after warning expires
+                        setTimeout(() => {
+                            alert('Your session has expired. You will be redirected to login.');
+                            window.location.href = '/d2l/login?sessionExpired=1';
+                        }, 1000);
+                    }, 60000);
+                }
+            }, 1740000); // 29 minutes
+        }
+
+        function dismissWarning() {
+            document.getElementById('session-warning').classList.add('hidden');
+            warningShown = false;
+            resetSessionTimer();
+            
+            // Simulate session extension API call
+            fetch('/d2l/lp/auth/session/extend', {
+                method: 'POST',
+                headers: {
+                    'X-Csrf-Token': localStorage.getItem('XSRF.Token') || '2aCPRSYJ2nMsvrPZSj4woDMjCtocmaEZ'
+                }
+            }).catch(() => {
+                console.log('Session extended');
+            });
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            // Update time immediately and every second
+            updateTime();
+            setInterval(updateTime, 1000);
+            
+            // Load courses with slight delay for better UX
+            setTimeout(loadCourses, 500);
+            
+            // Initialize session timer
+            resetSessionTimer();
+            
+            // Click anywhere to reset session timer
+            document.addEventListener('click', () => {
+                if (warningShown) {
+                    document.getElementById('session-warning').classList.add('hidden');
+                    warningShown = false;
+                }
+                resetSessionTimer();
+            });
+            
+            // Keyboard navigation support
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && warningShown) {
+                    document.getElementById('session-warning').classList.add('hidden');
+                    warningShown = false;
+                    resetSessionTimer();
+                }
+                
+                // Ctrl/Cmd + K for search
+                if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+                    e.preventDefault();
+                    searchCourses();
+                }
+            });
+            
+            // Add smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+            
+            // Add loading animation to buttons
+            document.querySelectorAll('.btn, .btn-promo, .btn-link').forEach(button => {
+                button.addEventListener('click', function(e) {
+                    // Only add loading for internal links
+                    if (this.href && this.href.startsWith(window.location.origin)) {
+                        const originalText = this.innerHTML;
+                        const originalWidth = this.offsetWidth;
+                        
+                        this.innerHTML = '<span class="loading-spinner" style="width: 20px; height: 20px; border-width: 2px; margin-right: 8px;"></span> Loading...';
+                        this.style.width = `${originalWidth}px`;
+                        this.disabled = true;
+                        
+                        // Remove loading state after navigation or timeout
+                        setTimeout(() => {
+                            this.innerHTML = originalText;
+                            this.style.width = '';
+                            this.disabled = false;
+                        }, 3000);
+                    }
+                });
+            });
+            
+            // Initialize external link tracking
+            document.querySelectorAll('a[target="_blank"]').forEach(link => {
+                link.addEventListener('click', function() {
+                    console.log('External link opened:', this.href);
+                    // Could send analytics here
+                });
+            });
+            
+            // Initialize tooltips for buttons
+            document.querySelectorAll('[title]').forEach(element => {
+                element.addEventListener('mouseenter', function() {
+                    // Simple tooltip implementation
+                    const tooltip = document.createElement('div');
+                    tooltip.className = 'tooltip';
+                    tooltip.textContent = this.title;
+                    tooltip.style.cssText = `
+                        position: absolute;
+                        background: var(--gray-800);
+                        color: white;
+                        padding: 4px 8px;
+                        border-radius: 4px;
+                        font-size: 12px;
+                        z-index: 10000;
+                        white-space: nowrap;
+                    `;
+                    
+                    const rect = this.getBoundingClientRect();
+                    tooltip.style.left = `${rect.left + window.scrollX}px`;
+                    tooltip.style.top = `${rect.top + window.scrollY - 30}px`;
+                    
+                    document.body.appendChild(tooltip);
+                    this._tooltip = tooltip;
+                });
+                
+                element.addEventListener('mouseleave', function() {
+                    if (this._tooltip) {
+                        this._tooltip.remove();
+                        this._tooltip = null;
+                    }
+                });
+            });
+            
+            // Check for updates
+            checkForUpdates();
+        });
+
+        // Check for system updates or announcements
+        function checkForUpdates() {
+            setTimeout(() => {
+                // Simulate checking for updates
+                const hasUpdates = Math.random() > 0.8;
+                if (hasUpdates) {
+                    console.log('System updates available');
+                    // Could show a notification here
+                }
+            }, 5000);
+        }
+
+        // Performance optimization
+        if ('IntersectionObserver' in window) {
+            const lazyLoadObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.dataset.src;
+                        img.classList.add('loaded');
+                        lazyLoadObserver.unobserve(img);
+                    }
+                });
+            });
+            
+            document.querySelectorAll('img[data-src]').forEach(img => {
+                lazyLoadObserver.observe(img);
+            });
+        }
+
+        // Error handling
+        window.addEventListener('error', (e) => {
+            console.error('Application error:', e.error);
+            // Could send error to analytics service
+        });
+
+        window.addEventListener('unhandledrejection', (e) => {
+            console.error('Unhandled promise rejection:', e.reason);
+        });
+
+        // Export functions for debugging
+        window.app = {
+            loadCourses,
+            searchCourses,
+            filterCourses,
+            dismissWarning,
+            updateTime
+        };
+    </script>
+
+    <!-- Performance Monitoring -->
+    <script>
+        // Simple performance monitoring
+        window.addEventListener('load', () => {
+            const timing = performance.getEntriesByType('navigation')[0];
+            if (timing) {
+                const loadTime = timing.loadEventEnd - timing.startTime;
+                console.log('Page loaded in:', loadTime.toFixed(2), 'ms');
+                
+                // Store performance data
+                localStorage.setItem('lastLoadTime', loadTime.toString());
+            }
+            
+            // Log largest contentful paint
+            new PerformanceObserver((entryList) => {
+                const entries = entryList.getEntries();
+                const lastEntry = entries[entries.length - 1];
+                console.log('Largest Contentful Paint:', lastEntry.startTime.toFixed(2), 'ms');
+            }).observe({type: 'largest-contentful-paint', buffered: true});
+            
+            // Monitor memory usage
+            if ('memory' in performance) {
+                setInterval(() => {
+                    console.log('Memory usage:', performance.memory);
+                }, 60000);
+            }
+        });
+    </script>
+</body>
+</html>
